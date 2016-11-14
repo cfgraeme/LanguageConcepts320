@@ -1,6 +1,11 @@
+%max returns the maximum value of a list.
 max([],0).
 max(List,M):- List = [M|Tail], max(Tail, N), M>N.
 max(List,M):- List =[N|Tail], max(Tail, M), M>N.
+
+% towers of hanoi problem, where N is number of discs, and ML is a list
+% of moves where each move is a list in the format: [disc number, pole
+% from, pole to].
 
 hanoi(0,[]).
 hanoi(1,[[1,1,3]]).
